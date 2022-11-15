@@ -12,7 +12,15 @@ namespace TestProject
             char letter = s.getLetterScore();
             Assert.AreEqual('A', letter);
         }
-
+        
+        [TestMethod]
+        public void WhenCoreIs7_TheLetter_ShouldBeB()
+        {
+            Student s = new Student();
+            s.Score = 7;
+            char letter = s.getLetterScore();
+            Assert.AreEqual('B', letter);
+        }
        
     }
 }
