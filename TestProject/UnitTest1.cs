@@ -48,5 +48,23 @@ namespace TestProject
             char letter = s.getLetterScore();
             Assert.AreEqual('E', letter);
         }
+        
+        [TestMethod]
+        public void WhenCoreIsSmaller0_TheLetter_ShouldBeEx()
+        {
+            String expectedMessage = "Score must not exeed 10.0";
+            String message = null;
+            Student s = new Student();
+
+            try
+            {
+                s.Score = -1;
+            }
+            catch(Exception e)
+            {
+                message = e.Message;
+            }
+            Assert.AreEqual(expectedMessage, message);
+        }
     }
 }
