@@ -39,5 +39,14 @@ namespace TestProject
             char letter = s.getLetterScore();
             Assert.AreEqual('D', letter);
         }
+        
+        [TestMethod]
+        public void WhenCoreIsSmaller3_5_TheLetter_ShouldBeE()
+        {
+            Student s = new Student();
+            s.Score = 3.4;
+            char letter = s.getLetterScore();
+            Assert.AreEqual('E', letter);
+        }
     }
 }
