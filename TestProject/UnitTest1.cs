@@ -30,5 +30,14 @@ namespace TestProject
             char letter = s.getLetterScore();
             Assert.AreEqual('C', letter);
         }
+        
+        [TestMethod]
+        public void WhenCoreIs3_5_TheLetter_ShouldBeD()
+        {
+            Student s = new Student();
+            s.Score = 3.5;
+            char letter = s.getLetterScore();
+            Assert.AreEqual('D', letter);
+        }
     }
 }
