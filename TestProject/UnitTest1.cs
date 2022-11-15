@@ -66,5 +66,23 @@ namespace TestProject
             }
             Assert.AreEqual(expectedMessage, message);
         }
+        
+        [TestMethod]
+        public void WhenCoreIsOver10_TheLetter_ShouldBeEx()
+        {
+            String expectedMessage = "Score must not exeed 10.0";
+            String message = null;
+            Student s = new Student();
+
+            try
+            {
+                s.Score = 11;
+            }
+            catch (Exception e)
+            {
+                message = e.Message;
+            }
+            Assert.AreEqual(expectedMessage, message);
+        }
     }
 }
