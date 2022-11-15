@@ -22,5 +22,13 @@ namespace TestProject
             Assert.AreEqual('B', letter);
         }
        
+        [TestMethod]
+        public void WhenCoreIs5_TheLetter_ShouldBeC()
+        {
+            Student s = new Student();
+            s.Score = 5;
+            char letter = s.getLetterScore();
+            Assert.AreEqual('C', letter);
+        }
     }
 }
